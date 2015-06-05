@@ -1,18 +1,7 @@
 #--------------------------------------------------------------
 # Instance
 #--------------------------------------------------------------
-resource "aws_instance" "main" {
-    instance_type = "t2.micro"
 
-    # Trusty 14.04
-    ami = "ami-2a734c42"
-
-    # This will create 1 instances
-    count = 0
-
-    subnet_id = "${aws_subnet.main.id}"
-    security_groups = ["${aws_security_group.allow_all.id}"]
-}
 
 #--------------------------------------------------------------
 # Security Group
